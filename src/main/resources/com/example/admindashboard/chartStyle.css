@@ -1,0 +1,28 @@
+.chart-legend {
+    -fx-background-color: #ffffff; /* Set background color */
+    -fx-padding: 10px; /* Add padding */
+    -fx-border-color: #cccccc; /* Add border color */
+    -fx-border-width: 1px; /* Add border width */
+    -fx-border-radius: 5px; /* Add border radius */
+}
+
+.chart-legend-item {
+    -fx-padding: 2px; /* Add padding to legend items */
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 0px; /* Set symbol background radius */
+}
+
+.chart-legend-item-text {
+    -fx-font-size: 12px; /* Set font size for legend text */
+    -fx-fill: #333333; /* Set text color */
+}
+.scatter-chart .chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}

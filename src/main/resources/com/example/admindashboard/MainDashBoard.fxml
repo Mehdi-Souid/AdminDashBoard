@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="957.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admindashboard.MainDashBoardController">
+   <children>
+      <VBox prefHeight="660.0" prefWidth="194.0">
+         <children>
+            <AnchorPane fx:id="side_ancorPane" prefHeight="644.0" prefWidth="170.0" styleClass="side_ancorPane" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="adminImage" fitHeight="66.0" fitWidth="71.0" layoutX="63.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/software-engineer.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="20.0" layoutY="170.0" prefHeight="328.0" prefWidth="163.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_workbench1" mnemonicParsing="false" onAction="#switchToFlights" prefHeight="43.0" prefWidth="163.0" text="Flights" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="planeImage" fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../java/images/airplane.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="btn_workbench11" />
+                              <String fx:value="cool-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btn_workbench11" mnemonicParsing="false" onAction="#switchToUsers" prefHeight="43.0" prefWidth="163.0" text="Users" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="usersImage" fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../java/images/group.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="btn_workbench11" />
+                              <String fx:value="cool-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btn_workbench111" mnemonicParsing="false" onAction="#switchToTickets" prefHeight="43.0" prefWidth="163.0" text="Tickets" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="ticketImage" fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../images/ticket-flight.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="btn_workbench11" />
+                              <String fx:value="cool-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btn_workbench" mnemonicParsing="false" prefHeight="43.0" prefWidth="163.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn_workbench12" />
+                              <String fx:value="cool-button" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fx:id="homeImage" fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_workbench1111" mnemonicParsing="false" onAction="#switchToReviews" prefHeight="43.0" prefWidth="163.0" text="Reviews" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="reviewsImage" fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../images/feedback.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="btn_workbench11" />
+                              <String fx:value="cool-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <VBox alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="20.0" prefWidth="20.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="140.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane prefHeight="536.0" prefWidth="754.0">
+         <children>
+            <Pane fx:id="mainPane" layoutX="9.0" layoutY="8.0" prefHeight="344.0" prefWidth="745.0" styleClass="mainPane" stylesheets="@style.css">
+               <children>
+                  <Text layoutX="179.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Century Schoolbook; -fx-font-size: 24;" text="Welcome to the Admin DashBoard" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century Schoolbook Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="210.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't put off until tomorrow what you can do today! ">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="planeImage2" fitHeight="52.0" fitWidth="66.0" layoutX="501.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/plane%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <AreaChart fx:id="areaChart" layoutX="2.0" layoutY="98.0" legendVisible="false" prefHeight="200.0" prefWidth="320.0" stylesheets="@chartStyle.css" title="Number of flight/day">
+                    <xAxis>
+                      <CategoryAxis endMargin="15.0" label="Days of the current month" prefHeight="40.0" prefWidth="288.0" side="BOTTOM" tickLength="1.0">
+                           <tickLabelFont>
+                              <Font name="Century Gothic Italic" size="14.0" />
+                           </tickLabelFont>
+                        </CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Number of flights" prefHeight="108.0" prefWidth="54.0" side="LEFT" tickLength="5.0" tickUnit="1.0">
+                           <tickLabelFont>
+                              <Font name="Century Gothic" size="12.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                    </yAxis>
+                  </AreaChart>
+                  <BarChart fx:id="chart" layoutX="309.0" layoutY="59.0" legendVisible="false" prefHeight="276.0" prefWidth="442.0" stylesheets="@chartStyle.css" title="FlightPrice">
+                    <xAxis>
+                      <CategoryAxis prefHeight="85.0" prefWidth="368.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="AVG Price DT" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <Pane layoutX="9.0" layoutY="365.0" prefHeight="270.0" prefWidth="745.0" styleClass="mainPane">
+               <children>
+                  <BarChart fx:id="dest_departChart" barGap="0.5" categoryGap="5.0" layoutX="-9.0" layoutY="-4.0" legendSide="TOP" prefHeight="270.0" prefWidth="565.0">
+                    <xAxis>
+                      <CategoryAxis endMargin="2.0" prefHeight="69.0" prefWidth="494.0" startMargin="2.0" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Number of Flights" prefHeight="172.0" prefWidth="47.0" side="LEFT" tickLength="5.0">
+                           <tickLabelFont>
+                              <Font size="12.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                    </yAxis>
+                  </BarChart>
+                  <Label layoutX="175.0" layoutY="7.0" text="Destination" textFill="#e0460d">
+                     <font>
+                        <Font name="Constantia Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="303.0" layoutY="7.0" text="Depart" textFill="#e77410">
+                     <font>
+                        <Font name="Constantia Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="549.0" layoutY="35.0" prefHeight="210.0" prefWidth="188.0" styleClass="mainPane">
+                     <children>
+                        <Label layoutX="2.0" layoutY="67.0" text="Total users:" textFill="#0077cc">
+                           <font>
+                              <Font name="Britannic Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="112.0" text="Ticket buyers:" textFill="#0077cc">
+                           <font>
+                              <Font name="Britannic Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="10.0" text="Users Card" textAlignment="CENTER" textFill="#333333">
+                           <font>
+                              <Font name="Century Schoolbook Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalUsers" alignment="CENTER" cacheShape="false" editable="false" layoutX="99.0" layoutY="62.0" prefHeight="27.0" prefWidth="85.0" styleClass="custom-text-field">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="ticketBuyers" alignment="CENTER" cacheShape="false" editable="false" layoutX="99.0" layoutY="107.0" prefHeight="27.0" prefWidth="85.0" styleClass="custom-text-field">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fx:id="userImage" fitHeight="55.0" fitWidth="55.0" layoutX="71.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../images/user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button fx:id="logoutButton" cancelButton="true" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="735.0" maxHeight="43.0" maxWidth="46.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="28.0" prefWidth="28.0" styleClass="button-24" text="X" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</HBox>
